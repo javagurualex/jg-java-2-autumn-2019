@@ -8,7 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ToDoListApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        //AppConfig - class with @ComponentScan and @Configuration
         ConsoleUI console = context.getBean(ConsoleUI.class);
         console.execute();
     }
